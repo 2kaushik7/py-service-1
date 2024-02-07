@@ -6,5 +6,9 @@ app = Flask(__name__)
 def home(name):
     return render_template('index.html', name=name)
 
+with app.test_request_context():
+    print('TEST')
+    print(url_for('how'))
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)

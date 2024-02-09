@@ -8,7 +8,6 @@ def home(name):
 
 with app.test_request_context():
     print('TEST')
-    print(url_for('how'))
 
 if __name__ == '__main__':
     app.run(debug=False)
